@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* general style */
+body {
+    @apply font-body antialiased;
+
+}
+
+section,  .footer-wrapper {
+    @apply my-40 container sm:px-8;
+}
+
+.btn {
+    @apply px-8 py-2 border text-sm transition-all duration-200 hover:transition-all hover:duration-200 tracking-widest;
+}
+
+.btn-primary--white {
+    @apply  border-black hover:text-white hover:bg-black ;
+}
+.btn-primary--black {
+    @apply  text-white border-white hover:text-black hover:bg-white;
+}
+
+
+
+/*=============================================
+=           header and navbar                 =
+=============================================*/
+header {
+    @apply sticky z-30 top-0 transition-all duration-300;
+}
+
+.show-nav {
+    @apply w-full bg-neutral-900 h-screen transition-all duration-300;
+}
+
+nav {
+    @apply flex items-center py-8 justify-between;
+}
+
+.nav__link {
+    @apply left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center;
+}
+
+.nav__link li {
+    @apply text-5xl mb-10 uppercase tracking-widest text-neutral-400 translate-y-5 hover:text-white font-light
+}
+
+/* nav button */
+.nav__btn {
+    @apply relative w-12 h-4 hover:h-5 origin-center  transition-all duration-300;
+}
+.nav__btn-span {
+    @apply h-0.5 w-full block  bg-gray-400 origin-center transition-all duration-300;
+}
+
+.nav__btn::before {
+    content: '';
+    @apply   absolute h-0.5 w-full bg-gray-400 top-0 right-0 origin-center transition-all duration-300;
+}
+.nav__btn::after {
+    content: '';
+    @apply  absolute h-0.5 w-full bg-gray-400 bottom-0 right-0 origin-center transition-transform;
+    
+}
+
+.nav__btn--close::before {
+    @apply  top-1/2 -translate-y-1/2 -rotate-45 transition-transform;
+   
+}
+.nav__btn--close::after {
+    @apply top-1/2 -translate-y-1/2 rotate-45 w-full transition-transform;
+}
+
+
+/*=====  End of navbar  ======*/
+
+
+/*=============================================
+=            Hero Section                     =
+=============================================*/
+.hero {
+    @apply mt-10;
+}
+
+
+.hero__text p {
+    @apply mb-3 text-2xl  font-light;
+}
+
+
+/*=====  End of Hero Section  ======*/
+
+
+
+
+/*=============================================
+=            Gallery Section                  =
+=============================================*/
+
+
+.gallery__wrapper {
+    @apply grid gap-4 grid-flow-row sm:grid-cols-8 sm:grid-areas-gallery ;
+}
+/* sm:grid-rows-[.6fr_1fr_.6fr_1fr_.6fr] */
+.item {
+    @apply overflow-hidden relative transition-transform duration-1000;
+}
+
+.item-a {
+    @apply sm:grid-in-itemA h-[10rem] sm:h-[36rem]
+}
+.item-b {
+    @apply sm:grid-in-itemB h-[20rem] sm:h-[50rem]
+}
+.item-c {
+    @apply sm:grid-in-itemC  h-[20rem] sm:h-[50rem]
+}
+.item-d {
+    @apply sm:grid-in-itemD h-[10rem] sm:h-[36rem]
+}
+.item-e {
+    @apply sm:grid-in-itemE h-[20rem] sm:h-[50rem]
+}
+.item-f {
+    @apply sm:grid-in-itemF h-[20rem] sm:h-[50rem]
+}
+.item-g {
+    @apply sm:grid-in-itemG h-[10rem] sm:h-[36rem]
+}
+
+.item:hover .tittle__text {
+    @apply translate-y-0 mt-0 ;
+}
+.item:hover .gallery__image {
+    @apply scale-105 transition-transform duration-[3000ms];
+}
+
+.gallery__image {
+    @apply w-full h-full relative transition-transform duration-[3000ms];
+}
+.gallery__image::before {
+    content: '';
+    @apply   absolute top-0 left-0 right-0 bottom-0 z-10 transition-all duration-300;
+}
+.gallery__image:hover::before {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.gallery__image img {
+    @apply w-full h-full bg-cover object-cover;
+    
+}
+
+
+.title__wrapper {
+    @apply absolute flex items-center top-[10%] left-[5%] overflow-hidden h-20 text-white z-20;
+}
+.tittle__text {
+    @apply text-5xl font-display  -translate-y-full -mt-12 transition-all duration-300;
+}
+
+
+/*=====  End of Gallery Section  ======*/
+
+
+
+
+/*=============================================
+=            Footer                           =
+=============================================*/
+
+footer {
+    @apply bg-neutral-900 py-9;
+}
+.footer-wrapper {
+    @apply grid sm:grid-cols-[1.2fr_1fr]  grid-cols-1  items-center;
+}
+
+.footer__contact p {
+    @apply font-display sm:text-4xl text-xl text-neutral-500 mb-20;
+}
+.footer__contact span {
+    @apply text-white;
+}
+
+.footer__contact ul  li {
+    @apply text-neutral-500 text-lg inline mr-10 font-semibold;
+}
+
+/*=====  End of Footer  ======*/
+
+
+
+/*=============================================
+=            Animate                         =
+=============================================*/
+
+.show-link {
+    animation-name: translateTop;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.visible-button {
+    animation-name: visibleButton;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.hidden-button {
+    animation-name: hiddenButton;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.show-fun-content {
+    animation-name: showFunContent;
+    animation-duration: 0.7s; 
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    visibility: hidden;
+}
+
+@keyframes translateTop {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes showFunContent {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(50px);
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes visibleButton {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes hiddenButton {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/*=====  End of Animate  ======*/
+
+
+/* fun */
+
+.content-fun {
+    @apply grid sm:grid-cols-[1fr_2fr] gap-y-10 sm:gap-40 py-8 sm:my-20 container px-5 sm:px-10;
+    visibility: hidden;
+}
+
