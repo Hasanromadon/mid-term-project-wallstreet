@@ -8,21 +8,27 @@ body {
 
 }
 
+
 section,  .footer-wrapper {
     @apply my-40 container sm:px-8;
 }
 
+img {
+    @apply dark:brightness-75 -z-10
+}
 .btn {
-    @apply px-8 py-2 border text-sm transition-all duration-200 hover:transition-all hover:duration-200 tracking-widest;
+    @apply px-8 py-2  text-sm transition-all duration-200 hover:transition-all hover:duration-200 tracking-widest;
 }
 
 .btn-primary--white {
-    @apply  border-black hover:text-white hover:bg-black ;
+    @apply  border-black dark:border-slate-400 border hover:text-white hover:dark:text-slate-400 hover:bg-black ;
 }
 .btn-primary--black {
-    @apply  text-white border-white hover:text-black hover:bg-white;
+    @apply  text-white border border-white dark:border-slate-100 hover:text-black  hover:dark:bg-slate-100 hover:bg-white;
 }
-
+.btn-tab {
+    @apply border-t border-x
+}
 
 
 /*=============================================
@@ -160,7 +166,7 @@ nav {
     @apply absolute flex items-center top-[10%] left-[5%] overflow-hidden h-20 text-white z-20;
 }
 .tittle__text {
-    @apply text-5xl font-display  -translate-y-full -mt-12 transition-all duration-300;
+    @apply text-5xl font-display  -translate-y-full -mt-12 dark:text-slate-100 transition-all duration-300;
 }
 
 
@@ -195,6 +201,46 @@ footer {
 
 
 
+
+
+/* fun */
+
+.content-fun {
+    @apply grid sm:grid-cols-[1fr_2fr] gap-y-10 sm:gap-40 py-8 sm:my-20 container px-5 sm:px-10;
+    visibility: hidden;
+}
+
+
+.content__about__title {
+    @apply font-display text-2xl mb-5
+}
+
+
+
+/*=============================================
+=            Tab Content                      =
+=============================================*/
+
+.tab__content {
+    @apply mt-10;
+    animation-name: showContent;
+    animation-duration: 0.7s; 
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    visibility: hidden;
+}
+
+.btn-tab-selected {
+    @apply border-b-0 border;
+}
+.btn-tab-unselected {
+    @apply border border-black bg-black text-white;
+}
+
+/*=====  End of Tab Content  ======*/
+
+
+
 /*=============================================
 =            Animate                         =
 =============================================*/
@@ -219,7 +265,7 @@ footer {
     animation-fill-mode: forwards;
 }
 .show-fun-content {
-    animation-name: showFunContent;
+    animation-name: showContent;
     animation-duration: 0.7s; 
     animation-timing-function: ease-out;
     animation-fill-mode: both;
@@ -234,7 +280,7 @@ footer {
         transform: translateY(0);
     }
 }
-@keyframes showFunContent {
+@keyframes showContent {
     0% {
         transform: translateY(50px);
         opacity: 0;
@@ -273,12 +319,3 @@ footer {
 }
 
 /*=====  End of Animate  ======*/
-
-
-/* fun */
-
-.content-fun {
-    @apply grid sm:grid-cols-[1fr_2fr] gap-y-10 sm:gap-40 py-8 sm:my-20 container px-5 sm:px-10;
-    visibility: hidden;
-}
-

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>Mid Term Project - Hasan</title>
+</head>
+<!--  -->
+
+
+<body class=" bg-white dark:text-slate-300 dark:bg-slate-900">
+    <header>
+        <nav class="container max-w-screen-xl">
+            <svg width="32px" version="1.1" fill="#9CA3AF" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 40 40"
+                style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                <g>
+                    <path d="M15,8.1c-1.6-0.6-3.3,0.2-3.8,1.8L5,26.8c-0.6,1.6,0.2,3.3,1.8,3.8c1.6,0.6,3.3-0.2,3.8-1.8L16.8,12
+                    C17.4,10.4,16.6,8.7,15,8.1z"></path>
+                    <circle cx="30.4" cy="26.9" r="3.5"></circle>
+                    <path d="M26,8.1c-1.6-0.6-3.3,0.2-3.8,1.8L16,26.8c-0.6,1.6,0.2,3.3,1.8,3.8c1.6,0.6,3.3-0.2,3.8-1.8L27.8,12
+                    C28.4,10.4,27.6,8.7,26,8.1z"></path>
+                </g>
+            </svg>
+            <div class="flex items-center gap-5">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="darkmode-btn on">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="nav__btn">
+                    <span class="nav__btn-span"> </span>
+                </button>
+            </div>
+
+            <ul class="nav__link absolute hidden">
+                <li> <a href="index.html">HOME</a> </li>
+                <li> <a href="about.html">ABOUT</a> </li>
+                <li> <a href="fun.html">FUN</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="float-button fixed bottom-10 right-10 z-50">
+        <a href="#main">
+            <svg class="hover:scale-110 duration-300 dark:fill-slate-200 " version="1.1" id="Ebene_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="53px" height="20px" viewbox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">
+                <g id="Ebene_3">
+                </g>
+                <g>
+                    <polygon points="43.886,16.221 42.697,17.687 26.5,4.731 10.303,17.688 9.114,16.221 26.5,2.312 	">
+                    </polygon>
+                </g>
+            </svg>
+
+        </a>
+    </div>
+    <main id="main" class="mb-40">
+        <div class="">
+            <div class="container  flex flex-col-reverse sm:flex-row items-center justify-center sm:gap-28 mb-20">
+                <div class="sm:w-96">
+                    <p class="font-display text-5xl font-black mb-7 ">HASAN ROMADON</p>
+                    <p>“A forward who is often compared to Premier League legend Thierry Henry, another former Monaco
+                        man, Anthony Martial has all of the tools needed to shine at Manchester United”</p>
+                </div>
+                <div class="relative">
+                    <img class="z-10 absolute" src="./images/profile1.png">
+                    <img class="w-80 top-0" src="./images/square-1.gif" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tab container sm:px-28 ">
+                <div class="tab__button_wrapper border-b">
+                    <button class="btn btn-tab--1 btn-tab-selected">PERSONAL</button><button
+                        class="btn btn-tab--2 btn-tab-unselected">TECH</button>
+                </div>
+                <div class="tab__content tab--1">
+                    <div class="grid sm:grid-cols-[1.4fr_1fr] gap-8 mb-8">
+                        <div>
+                            <p class="content__about__title">Work experience</p>
+                            <p class="font-semibold mb-2">UX Designer and concepter, Volkswagen Group Future Center
+                                Europe
+                            </p>
+                            <p class="text-sm text-neutral-500 mb-2">March 2014 – September 2014 | Shanghai, China</p>
+                            <p class="">Concept development & research , user story & personas, information
+                                architecture, user
+                                flow, prototype, application design, web design, wearable devices</p>
+                        </div>
+                        <div class="py-8 flex flex-col gap-8">
+                            <div class="border-l pl-10">
+                                <p class="content__about__title">City</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="./images//indonesia.svg" />
+                                    <p class="font-semibold mb-2">Depok, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="border-l pl-10">
+                                <p class="content__about__title">Education</p>
+                                <p class="font-semibold mb-2">
+                                    Wallstreet Devops | Fullstack Javascript
+                                </p>
+                                <p class="text-sm text-neutral-500 mb-2">January 2022 – March 2022 | Depok,
+                                    Indonesia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trivia -->
+                    <p class="content__about__title">Trivia</p>
+                    <table class="table-auto w-full">
+                        <tr class="">
+                            <td class="py-5 pl-4">Shoes Number</td>
+                            <td class="py-5">40</td>
+                        </tr>
+                        <tr class="bg-cyan-50 dark:bg-indigo-400">
+                            <td class="py-5 pl-4">Favourite food/drink</td>
+                            <td class="py-5">Soto Betawi</td>
+                        </tr>
+                        <tr class="">
+                            <td class="py-5 pl-4">Zodiack</td>
+                            <td class="py-5">&#9810; Aquarius</td>
+                        </tr>
+                        <tr class="bg-cyan-50 dark:bg-indigo-400">
+                            <td class="py-5 pl-4">Hobby</td>
+                            <td class="py-5">Singing, Swimming</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <!-- tab 2 -->
+                <div class="tab__content tab--2 hidden max-w-3xl mx-auto">
+                    <div class="card-tech border-b p-6 sm:flex gap-10 ">
+                        <img class="w-10 sm:w-16" src="./images/js.svg" />
+                        <div class="">
+                            <p class="content__about__title">JAVASCRIPT</p>
+                            <p>Concept development & research , user story & personas, information architecture, user
+                                flow, prototype, application design, web design, wearable devices</p>
+                        </div>
+                    </div>
+                    <div class="card-tech border-b p-6  sm:flex gap-10 ">
+                        <img class="w-10 sm:w-16" src="./images/html.svg" />
+                        <div class="">
+                            <p class="content__about__title">HTML</p>
+                            <p>Concept development & research , user story & personas, information architecture, user
+                                flow, prototype, application design, web design, wearable devices</p>
+                        </div>
+                    </div>
+                    <div class="card-tech border-b p-6  sm:flex gap-10 ">
+                        <img class="w-10 sm:w-16" src="./images/tailwind.svg" />
+                        <div class="">
+                            <p class="content__about__title">CSS - TAILWIND</p>
+                            <p>Concept development & research , user story & personas, information architecture, user
+                                flow, prototype, application design, web design, wearable devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer__contact">
+                <p>I’m always up for adventure and international opportunities. Feel free to say hello via
+                    <span> mayujiadesign@gmail.com.</span>
+                </p>
+                <ul>
+                    <li><a href="/"> Linkedin</a></li>
+                    <li><a href="/">Dribbble </a></li>
+                    <li><a href="/">Behance</a></li>
+                    <li><a href="/">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <img class="w-96 mx-auto" src="./images/resume.png" />
+                <button class="btn btn-primary--black">Download CV</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./observepage.js"></script>
+</body>
+
+</html>
